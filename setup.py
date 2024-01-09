@@ -14,7 +14,7 @@ setup(
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     package_dir={"skill_lovecraft_comics": ""},
-    package_data={'skill_lovecraft_comics': ['locale/*', 'res/*', 'ui/*']},
+    package_data={'skill_lovecraft_comics': ['locale/*', 'res/*', 'res/*']},
     packages=['skill_lovecraft_comics'],
     include_package_data=True,
     install_requires=["ovos_workshop~=0.0.5a1"],

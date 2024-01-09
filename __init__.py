@@ -13,9 +13,9 @@ class LovecraftComicsSkill(OVOSCommonPlaybackSkill):
         self.supported_media = [MediaType.AUDIOBOOK,
                                 MediaType.VISUAL_STORY,
                                 MediaType.VIDEO]
-        self.default_bg = join(dirname(__file__), "ui", "bg.png")
-        self.default_image = join(dirname(__file__), "ui", "dagon.png")
-        self.skill_icon = join(dirname(__file__), "ui", "icon.png")
+        self.default_bg = join(dirname(__file__), "res", "bg.png")
+        self.default_image = join(dirname(__file__), "res", "dagon.png")
+        self.skill_icon = join(dirname(__file__), "res", "icon.png")
         self.db = JsonStorage(join(dirname(__file__), "res",
                                    "JeremyZahn_lovecraft_comics.json"))
         self.db2 = JsonStorage(join(dirname(__file__), "res",
@@ -225,5 +225,5 @@ if __name__ == "__main__":
     s = LovecraftComicsSkill(bus=FakeBus(), skill_id="t.fake")
     for r in s.search_db("Dagon", MediaType.VISUAL_STORY):
         print(r)
-        # {'match_confidence': 75, 'media_type': <MediaType.VISUAL_STORY: 13>, 'uri': 'youtube//https://www.youtube.com/watch?v=Gv1I0y6PHfg', 'playback': <PlaybackType.VIDEO: 1>, 'image': 'https://img.youtube.com/vi/Gv1I0y6PHfg/hqdefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-dagon/ui/bg.png', 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'title': 'Dagon (Motion Comic)', 'author': 'H. P. Lovecraft', 'album': 'Lovecraft Motion Comics by Jeremy Zahn'}
-        # {'match_confidence': 75, 'media_type': <MediaType.VISUAL_STORY: 13>, 'uri': 'youtube//https://www.youtube.com/watch?v=EskPmtogx18', 'playback': <PlaybackType.VIDEO: 1>, 'image': 'https://img.youtube.com/vi/EskPmtogx18/hqdefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-dagon/ui/bg.png', 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'title': 'Dagon', 'author': 'H. P. Lovecraft', 'album': 'Lovecraft Motion Comics by Tanabe Gou'}
+        # {'match_confidence': 75, 'media_type': <MediaType.VISUAL_STORY: 13>, 'uri': 'youtube//https://www.youtube.com/watch?v=Gv1I0y6PHfg', 'playback': <PlaybackType.VIDEO: 1>, 'image': 'https://img.youtube.com/vi/Gv1I0y6PHfg/hqdefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-dagon/res/bg.png', 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'title': 'Dagon (Motion Comic)', 'author': 'H. P. Lovecraft', 'album': 'Lovecraft Motion Comics by Jeremy Zahn'}
+        # {'match_confidence': 75, 'media_type': <MediaType.VISUAL_STORY: 13>, 'uri': 'youtube//https://www.youtube.com/watch?v=EskPmtogx18', 'playback': <PlaybackType.VIDEO: 1>, 'image': 'https://img.youtube.com/vi/EskPmtogx18/hqdefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-dagon/res/bg.png', 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'title': 'Dagon', 'author': 'H. P. Lovecraft', 'album': 'Lovecraft Motion Comics by Tanabe Gou'}
